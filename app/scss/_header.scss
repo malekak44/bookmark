@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+
+    // &__logo {}
+
+    &__links {
+        a {
+            text-transform: uppercase;
+            color: $veryDarkBlue;
+            font-size: 14px;
+            letter-spacing: 1px;
+
+            &:not(:first-child) {
+                margin-left: 32px;
+            }
+        }
+
+        .loginBtn {
+            background: $softRed;
+            padding: 10px 25px;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+}
