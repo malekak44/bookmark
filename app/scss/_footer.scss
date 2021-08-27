@@ -6,28 +6,56 @@
         margin: auto;
         padding: 2rem;
         display: flex;
+        text-align: center;
         align-items: center;
         justify-content: space-around;
+        flex-direction: column;
+
+        @include breakpoint-up(large) {
+            text-align: left;
+            flex-direction: row;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 0;
+        }
     }
 
     &__links {
-        margin-right: auto;
-        margin-top: -4px;
-        margin-left: 4rem;
+        margin: 0 0 1rem 0;
+
+        @include breakpoint-up(large) {
+            margin: -4px auto 0 4rem;
+        }
 
         a {
             text-transform: uppercase;
             color: white;
-            font-size: 14px;
+            font-size: 0.875rem;
             letter-spacing: 1px;
             transition: all 0.3s ease-in-out;
+            display: block;
+            padding: 1rem 0;
+
+            @include breakpoint-up(large) {
+                display: inline;
+                padding: 0;
+            }
 
             &:hover {
                 color: $softRed;
             }
 
             &:not(:first-child) {
-                margin-left: 32px;
+                margin-left: auto;
+
+                @include breakpoint-up(large) {
+                    margin-left: 32px;
+                }
             }
         }
     }

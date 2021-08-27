@@ -13,7 +13,13 @@
       flex: 1;
 
       &:last-child {
-        margin-left: 1em;
+        margin-left: 1.5em;
+        margin-right: 1.3em;
+
+        @include breakpoint-up(large) {
+          margin-left: 1em;
+          margin-right: 0;
+        }
       }
     }
   }
@@ -25,7 +31,7 @@
   }
 
   .tab {
-    width: 33.5rem;
+    max-width: 33.5rem;
     margin: auto;
     color: $veryDarkBlue;
     overflow: hidden;
@@ -38,10 +44,15 @@
     &-label {
       display: flex;
       justify-content: space-between;
-      padding: 1em;
+      padding: 1em 0px 1em 3px;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 1rem;
       transition: all 0.3s ease-in-out;
+
+      @include breakpoint-up(large) {
+        font-size: 1.125rem;
+        padding: 1em;
+      }
 
       /* Icon */
       &:hover {
@@ -98,7 +109,7 @@
     width: 7rem;
     color: white;
     display: block;
-    padding: 13px 0px;
+    padding: 0.8125rem 0px;
     text-align: center;
     margin: 3.5rem auto;
     border-radius: 5px;

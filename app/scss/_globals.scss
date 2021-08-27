@@ -5,6 +5,10 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+
+    &.noscroll {
+        overflow: hidden;
+    }
 }
 
 *,
@@ -20,7 +24,11 @@ a {
 p {
     color: $grayishBlue;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 1rem;
+
+    @include breakpoint-up(large) {
+        font-size: 1.125rem;
+    }
 }
 
 .button {
@@ -55,8 +63,8 @@ p {
     }
 
     &--px {
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
 
     &--pt {
@@ -121,15 +129,28 @@ p {
 .section__intro {
     text-align: center;
     margin-bottom: 3rem;
+    padding: 0 1rem;
+
+    @include breakpoint-up(large) {
+        padding: 0;
+    }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 500;
         color: $veryDarkBlue;
+
+        @include breakpoint-up(large) {
+            font-size: 2rem;
+        }
     }
 
     p {
-        width: 33.5rem;
         margin: auto;
+        width: auto;
+
+        @include breakpoint-up(large) {
+            width: 33.5rem;
+        }
     }
 }

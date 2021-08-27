@@ -1,7 +1,35 @@
+const btnHamburger = document.querySelector('#btnHamburger');
+const headerLogo = document.querySelector(".header__logo img");
+const body = document.querySelector('body');
+const header = document.querySelector('.header');
+const overlay = document.querySelector('.overlay');
+const fadeElems = document.querySelectorAll('.has-fade');
 const featuresList = document.querySelector("#features__list");
 const tabImage = document.querySelector("#tab-image");
 const tabHeader = document.querySelector("#tab-header");
 const tabPara = document.querySelector("#tab-para");
+
+btnHamburger.addEventListener('click', function () {
+    if (header.classList.contains('open')) { // Close Hamburger Menu
+        body.classList.remove('noscroll');
+        header.classList.remove('open');
+        fadeElems.forEach(function (element) {
+            element.classList.remove('fade-in');
+            element.classList.add('fade-out');
+        });
+        headerLogo.src = "images/logo-bookmark.svg";
+    }
+    else { // Open Hamburger Menu
+        body.classList.add('noscroll');
+        header.classList.add('open');
+        fadeElems.forEach(function (element) {
+            element.classList.remove('fade-out');
+            element.classList.add('fade-in');
+        });
+        headerLogo.src = "images/white-bookmark.svg";
+    }
+});
+
 
 function toggleTab(elem) {
     for (var i = 0; i < elem.length; i++) {
