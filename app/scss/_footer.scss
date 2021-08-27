@@ -1,0 +1,35 @@
+.footer {
+    background: $veryDarkBlue;
+
+    &__content {
+        width: 85%;
+        margin: auto;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__links {
+        margin-right: auto;
+        margin-top: -4px;
+        margin-left: 4rem;
+
+        a {
+            text-transform: uppercase;
+            color: white;
+            font-size: 14px;
+            letter-spacing: 1px;
+
+            &:not(:first-child) {
+                margin-left: 32px;
+            }
+        }
+    }
+
+    &__social {
+        svg:first-child {
+            margin-right: 1.5rem;
+        }
+    }
+}

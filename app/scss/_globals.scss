@@ -17,6 +17,16 @@ a {
     text-decoration: none;
 }
 
+p {
+    color: $grayishBlue;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.button {
+    box-shadow: 0px 0.375rem 12px #5368df6b;
+}
+
 // Spacing
 .container {
     max-width: 67.375rem;
@@ -105,5 +115,21 @@ a {
 .hide-for-desktop {
     @include breakpoint-up(large) {
         display: none;
+    }
+}
+
+.section__intro {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $veryDarkBlue;
+    }
+
+    p {
+        width: 33.5rem;
+        margin: auto;
     }
 }
