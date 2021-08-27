@@ -29,10 +29,18 @@
             .button {
                 position: relative;
                 background: $softBlue;
-                padding: 15px 2rem;
+                padding: 11px 1.75rem;
                 border-radius: 5px;
                 color: white;
                 font-size: 15px;
+                transition: all 0.3s ease-in-out;
+                border: 2px solid transparent;
+
+                &:hover {
+                    background: white;
+                    color: $softBlue;
+                    border: 2px solid $softBlue;
+                }
 
                 &::before {
                     content: url('../images/bg-dots.svg');

@@ -42,10 +42,18 @@
         }
 
         .button {
-            padding: 14px 24px;
+            padding: 12px 20px;
             background: $softRed;
             color: white;
             border-radius: 5px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $softRed;
+                background: white;
+                border: 2px solid $softRed;
+            }
         }
     }
 }

@@ -25,13 +25,21 @@
 
     &__btns {
         .button {
-            padding: 14px 25px;
+            padding: 12px 22px;
             border-radius: 5px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease-in-out;
 
             &:first-child {
                 background: $softBlue;
                 color: white;
                 margin-right: 1rem;
+
+                &:hover {
+                    background: white;
+                    color: $softBlue;
+                    border: 2px solid $softBlue;
+                }
             }
 
             &:last-child {
@@ -39,6 +47,11 @@
                 color: #787b88;
                 font-weight: 500;
                 box-shadow: 0px 0.375rem 12px lightgrey;
+
+                &:hover {
+                    background: white;
+                    border: 2px solid #787b88;
+                }
             }
         }
     }
